@@ -1,0 +1,14 @@
+{
+    "name": "callab/api",
+    "description": "API to the services of Callab.me",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Callab.me",
+            "email": "info@callab.me"
+        }
+    ],
+    "require": {
+        "ext-curl": "*"
+    }
+}
