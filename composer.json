@@ -1,14 +1,32 @@
 {
     "name": "callab/api",
     "description": "API to the services of Callab.me",
+    "version": "1.0.0",
+    "type": "library",
     "license": "MIT",
+    "homepage": "https://github.com/cloudinary/cloudinary_php",
+    "keywords": ["callab", "videoconference", "conference", "live stream", "api"],
     "authors": [
         {
             "name": "Callab.me",
-            "email": "info@callab.me"
+            "email": "developer@callab.me"
         }
     ],
     "require": {
         "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Callab\\Api\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Callab\\Api\\BaseServiceProvider"
+            ]
+        }
     }
 }

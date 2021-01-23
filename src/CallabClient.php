@@ -1,7 +1,10 @@
 <?php
 
+namespace Callab\Api;
+
 /**
- * Class Client
+ * Class CallabClient
+ * @package Callab\Api
  */
 class CallabClient {
     protected $base_url;
