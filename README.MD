@@ -14,7 +14,7 @@ $secret_key = "8f0a9c7228e7893ef0f7d9706dce499c34501714";
 $base_url = "https://app.callab.me";
 
 // 1. Create instance of Client with credentials
-$client = new CallabClient($base_url, $secret_key, $api_key);
+$client = new CallabClient($base_url, $api_key, $secret_key);
 
 // 2. Schedule meeting
 $response = $client->scheduleMeeting(

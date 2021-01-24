@@ -25,7 +25,7 @@ class CallabClient {
      * @param $secret
      * @param $access_key
      */
-    public function __construct($base_url, $secret, $access_key)
+    public function __construct($base_url, $access_key, $secret)
     {
         $this->base_url = $base_url;
         $this->secret = $secret;
@@ -94,14 +94,14 @@ class CallabClient {
                 'name' => $name,
                 'title' => $title,
                 'type' => $type,
-                'brandId' => $brandId,
-                'iconsetId' => $iconsetId,
+                'brand_id' => $brandId,
+                'iconset_id' => $iconsetId,
                 'secret' => $secret,
-                'isLocked' => $isLocked,
-                'hasChat' => $hasChat,
-                'hasFileSharing' => $hasFileSharing,
-                'hasVisitors' => $hasVisitors,
-                'hasVisitorsChat' => $hasVisitorsChat,
+                'locked_on_start' => $isLocked,
+                'chat_enabled_on_start' => $hasChat,
+                'filesharing_enabled_on_start' => $hasFileSharing,
+                'visitors_enabled' => $hasVisitors,
+                'visitors_chat_enabled' => $hasVisitorsChat,
             ]
         );
     }
@@ -205,7 +205,7 @@ class CallabClient {
         } else if($code === 404) {
             throw new \Exception('Your API key does not allow this operation or it was removed.', 404);
         } else {
-            throw new \Exception('Unexpected error! Code ' . $code . ' - ' . $result, 500);
+            throw new \Exception('Unexpected error! Code ' . $code . ' - ' . $response, 500);
         }
     }
 
